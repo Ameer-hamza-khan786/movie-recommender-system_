@@ -159,7 +159,7 @@ if st.button('Recommend'):
 st.markdown(
     """
     <div class="footer">
-        <p>Made with ❤️ by Your Name | Powered by Streamlit & TMDB API</p>
+        <p>Made with ❤️ by Ameer Hamza Khan | Powered by Streamlit & TMDB API</p>
     </div>
     """,
     unsafe_allow_html=True
