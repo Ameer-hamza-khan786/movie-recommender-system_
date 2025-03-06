@@ -73,6 +73,20 @@ def set_background():
             border-color: #00c853;
             outline: none;
         }
+
+        /* Footer */
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #1a1a1a;
+            color: #e0e0e0;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            border-top: 1px solid #444;
+        }
         </style>
         """,
         unsafe_allow_html=True
@@ -115,8 +129,6 @@ def get_movie_poster(movie_title):
     else:
         return "Movie not found."
 
-
-
 # Load the movie data and recommender list
 movie = pickle.load(open('movie.pkl', 'rb'))
 recommender_dict = pickle.load(open('recommender_dict', 'rb'))
@@ -142,3 +154,13 @@ if st.button('Recommend'):
                 st.image(poster_url, caption=movie_title, width=150)  # Display the poster image
             else:
                 st.write("No poster available.")
+
+# Footer
+st.markdown(
+    """
+    <div class="footer">
+        <p>Made with ❤️ by Your Name | Powered by Streamlit & TMDB API</p>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
